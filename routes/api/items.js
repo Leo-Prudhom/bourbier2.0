@@ -15,11 +15,10 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     const newItem = new Item({
-        name : req.body.name,
-        size : req.body.size,
-        qty  : req.body.qty,
+        title : req.body.name,
         descr : req.body.descr,
-        price : req.body.price
+        price : req.body.price,
+        variants: req.body.variants
     });
 
     newItem.save().then(item => res.json(item)).catch(err => res.status(404).json(err.message));

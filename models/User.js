@@ -14,8 +14,18 @@ const UserSchema = new Schema({
         required : true
     },
     adress: {
-        type : String,
-        required : true
+        street : {
+            type : String,
+            required : true
+        },
+        postalCode : {
+            type : Number,
+            required : true
+        },
+        city : {
+            type : String,
+            required : true
+        }
     }
 });
 
