@@ -15,11 +15,12 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <AppNavbar />
+            <AppNavbar />
+          
 
           <Switch>
             <Route path="/" component={Home} exact/>
-            <Route path="/items" component={ItemList} />
+            <Route path="/products" component={ItemList} />
 
             <Route component={Error} />
           </Switch>

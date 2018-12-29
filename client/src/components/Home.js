@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slider from './Slider';
+import HomePageitems from './HomePageItems';
 
 class Home extends Component {
     
@@ -7,10 +8,11 @@ class Home extends Component {
         return (
             <div>
 
-                <div style={{width :'90%', margin:"auto"}}>
+                <div style={{marginBottom:"2%"} }>
                     <Slider />
                 </div>
 
+                <HomePageitems/>
 
                 
             </div>

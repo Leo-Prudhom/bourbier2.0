@@ -20,9 +20,9 @@ class AppNavbar extends Component {
     }
     render() {
       return (
-        <div>
-          <Navbar color="fade" light>
-            <NavbarBrand className="mr-auto">BOURBIER</NavbarBrand> 
+        
+          <Navbar color="white" light sticky='top'>
+            <NavLink to='/' style={{color:'black'}}> <NavbarBrand className="mr-auto">BOURBIER</NavbarBrand> </NavLink>
 
               <NavbarToggler onClick={this.toggleNavbar} className="ml-auto" />
 
@@ -32,19 +32,19 @@ class AppNavbar extends Component {
                 </NavItem>
               </Nav>
             
-              <Collapse isOpen={!this.state.collapsed} navbar >
+              <Collapse isOpen={!this.state.collapsed} navbar sticky='top'>
                 <Nav navbar>
                   <NavItem>
                     <NavLink to="/">Home</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink to="/items">Items</NavLink>
+                    <NavLink to="/products">Products</NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>
 
             </Navbar>
-        </div>
+
       );
     }
   }
