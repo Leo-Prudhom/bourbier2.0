@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
+import { FaShoppingCart } from 'react-icons/fa';
 
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 
@@ -23,22 +24,22 @@ class AppNavbar extends Component {
         
           <Navbar color="white" light sticky='top'>
             <NavLink to='/' style={{color:'black'}}> <NavbarBrand className="mr-auto">BOURBIER</NavbarBrand> </NavLink>
+            
+            <Nav className="ml-auto">
+              <NavLink to='/' style={{color:'black'}}>
+                <FaShoppingCart />
+              </NavLink>
+            </Nav>
 
-              <NavbarToggler onClick={this.toggleNavbar} className="ml-auto" />
-
-              <Nav style={{marginLeft:"2%"}}>
-                <NavItem>
-                  Basket
-                </NavItem>
-              </Nav>
+              <NavbarToggler onClick={this.toggleNavbar} style={{marginLeft:'2%'}}/>
             
               <Collapse isOpen={!this.state.collapsed} navbar sticky='top'>
-                <Nav navbar>
+                <Nav navbar className="float-right">
                   <NavItem>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/" style={{color:'black'}}>Inscription / Connexion</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink to="/products">Products</NavLink>
+                    <NavLink to="/products" style={{color:'black'}}>Produits</NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>

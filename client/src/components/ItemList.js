@@ -20,11 +20,15 @@ class ItemList extends Component {
     render() {
         return (
             <div>
+            
                 <div>Here a sort by (cat/price/gender/size) option</div>
                 Items will display 
                 <Row>
                         {this.state.items.map( item =>
-                            <ItemCard   id={item._id}
+                            
+                            <ItemCard  
+                                    key={item._id}
+                                    id={item._id}
                                     title={item.title} 
                                     price={item.price}        
                             />

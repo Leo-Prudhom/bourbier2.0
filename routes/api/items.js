@@ -13,6 +13,10 @@ router.get('/', (req, res) => {
     Item.find().then(items => res.json(items));
 });
 
+router.get('/:id', (req, res) => {
+    Item.findById(req.params.id).then(items => res.json(items));
+});
+
 router.post('/', (req, res) => {
     const newItem = new Item({
         title : req.body.name,
