@@ -8,6 +8,7 @@ import Home from './components/Home';
 import ItemList from './components/ItemList';
 import ProductVue from './components/ProductVue';
 import Error from './components/Error';
+import Signup from './components/customer/Signup';
 
 class App extends Component {
 
@@ -22,6 +23,7 @@ class App extends Component {
           <Switch location={this.props.location}>
             <Route path="/" component={Home} exact/>
             <Route path="/products" component={ItemList} />
+            <Route path="/customer/signup" component={Signup} />
             <Route path="/:productId" render={(props) => <ProductVue {...props} />} />
 
             <Route component={Error} />

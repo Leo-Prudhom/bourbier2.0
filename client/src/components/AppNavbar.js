@@ -36,7 +36,10 @@ class AppNavbar extends Component {
               <Collapse isOpen={!this.state.collapsed} navbar sticky='top'>
                 <Nav navbar className="float-right">
                   <NavItem>
-                    <NavLink to="/" style={{color:'black'}}>Inscription / Connexion</NavLink>
+                    <NavLink to="/customer/signup" style={{color:'black'}}>Inscription</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink to="/customer/login" style={{color:'black'}}>Connexion</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink to="/products" style={{color:'black'}}>Produits</NavLink>
